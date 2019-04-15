@@ -1,0 +1,79 @@
+Guião 7 
+-- 7_1)
+a)
+1FN, não existem nested relations nem atributos multi-valor. Não pode estar na 
+2FN pois existem dependencias parciais
+
+b)
+
+(Titulo_Livro,Nome_Autor),Editor,Tipo_Livro,NoPaginas,Ano_Publicação
+(Tipo_Livro,NoPaginas),Preço
+(Nome_Autor),Afiliação_Autor
+(Editor),Endereço_Editor
+
+Criação de novas relações de forma a eliminar dependencias parciais
+Esta na forma 3FN pois nao existem dependencias transitivas
+
+
+
+
+
+-- 7_2)
+
+a) 
+A chave é (A,B) porque apenas (A) só chegamos {D,E,I,J}, com (B) chegamos a {F,G,H}, 
+com (F) chegamos a {G,H}, com (D) chegamos a {I,J}, enquanto que com (A,B) conseguimos 
+chegar a {C,D,E,I,J,F,G,H}, ou seja conseguimos chegar a todos os elementos.
+
+b)
+
+{A,B},C
+{A},D,E,I,J
+{B},F,G,H
+
+
+c)
+
+{A,B},C
+{A},D,E
+{D},I,J
+{B},F
+{F},G,H
+
+-- 7_3)
+a)
+A chave é (A,B)
+
+b)
+Já está na forma de 3FN porque não tens estados transitivos
+
+{A,B},C,D,E
+{D},E
+{C}, A
+
+
+c)
+BCNF
+
+(ABC)(DE)
+{B},C,D
+{D},E
+{C},A
+
+-- 7_4)
+a)
+{A},C
+{A,B},E
+
+
+b) 
+{A},C
+{C},D
+{A,B},E
+
+c)
+{A,D,E}
+A,C
+C,D
+
+
